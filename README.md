@@ -254,12 +254,35 @@ raw html frontend
 
 ## getting started
 
-1. download repository
-2. extract files
-3. open main.html in browser
-4. navigate using menu links
-5. use search.html for content search
-6. visit admin.html to manage records
+### clone and run locally
+
+```bash
+# clone the repository
+git clone https://github.com/yourusername/pranav.git
+
+# navigate to project directory
+cd pranav
+
+# start local web server (python 3)
+python -m http.server 8000
+
+# or use python 2
+python -m SimpleHTTPServer 8000
+
+# or use node http-server
+npx http-server
+```
+
+then open http://localhost:8000/main.html in your browser.
+
+### browsing the site
+
+1. start at main.html (home page)
+2. use browse.html to explore by era and empire
+3. click links to visit detail pages for empires, dynasties, figures, and sites
+4. use timeline.html for chronological view of events
+5. reference glossary.html for terminology definitions
+6. use search.html to find specific content (minimum 2 characters)
 
 ## file sizes
 
