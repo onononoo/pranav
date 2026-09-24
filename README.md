@@ -4,7 +4,7 @@ a comprehensive static web-based historical information system documenting the h
 
 ## project overview
 
-the indian history database contains 30+ interconnected html pages with 100+ historical records organized chronologically and thematically. the project is built entirely with raw html, css, and javascript with no backend requirements or external dependencies.
+the pranav indian history database contains 40+ interconnected html pages with 100+ historical records organized chronologically and thematically. the project is built entirely with raw html, css, and javascript with no backend requirements or external dependencies.
 
 ### core features
 
@@ -37,7 +37,15 @@ the indian history database contains 30+ interconnected html pages with 100+ his
 ├── sitemap.html           # complete site index
 ├── maurya.html            # mauryan empire details
 ├── gupta.html             # gupta empire details
+├── chola.html             # chola empire maritime details
+├── vijayanagara.html      # vijayanagara south indian empire
 ├── mughal.html            # mughal empire details
+├── regions.html           # geographical regions of india
+├── architecture.html      # architecture and monuments
+├── culture.html           # art, music, dance, literature
+├── religion.html          # religion and philosophy
+├── military.html          # war and military history
+├── pages.html             # complete page index
 ├── data.json              # structured historical data
 ├── script.js              # javascript interactivity
 ├── styles.css             # stylesheet definitions
@@ -232,11 +240,13 @@ python -m http.server 8000
 
 | metric | value |
 |--------|-------|
-| total files | 35+ |
-| html pages | 30+ |
+| total files | 45+ |
+| html pages | 40+ |
+| empire detail pages | 5 |
+| thematic pages | 5 (regions, architecture, culture, religion, military) |
 | total records | 100+ |
 | glossary terms | 50+ |
-| hyperlinks | 100+ |
+| hyperlinks | 300+ |
 | api endpoints | 6 |
 
 ## architecture

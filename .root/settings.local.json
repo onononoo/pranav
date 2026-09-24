@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(New-Item -ItemType File -Path \"C:\\\\Users\\\\karae\\\\Apps\\\\Code\\\\pranav\\\\README.md\" -Force)",
+      "PowerShell(Copy-Item \"C:\\\\Users\\\\karae\\\\Apps\\\\Code\\\\pranav\\\\Screenshot 2026-09-24 141322.png\" \"C:\\\\Users\\\\karae\\\\Apps\\\\Code\\\\pranav\\\\favicon.png\" -Force)",
+      "Bash(mv \".claude\" \".root\")",
+      "Bash(mv \".claude\" \".root_backup\")",
+      "Bash(mv \".claude_backup\" \".root\")"
+    ]
+  }
+}
