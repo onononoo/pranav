@@ -1,0 +1,224 @@
+{
+  "empires": [
+    {
+      "name": "mauryan empire",
+      "period": "322 bce to 185 bce",
+      "founder": "chandragupta maurya",
+      "capital": "pataliputra",
+      "religion": "buddhism under ashoka",
+      "major_rulers": [
+        {
+          "name": "chandragupta maurya",
+          "reign": "322-298 bce",
+          "notes": "founder and military strategist"
+        },
+        {
+          "name": "ashoka",
+          "reign": "268-232 bce",
+          "notes": "spread of buddhism, rock edicts"
+        }
+      ],
+      "achievements": [
+        "centralized administration",
+        "extensive military campaigns",
+        "construction of stupas",
+        "ashoka's edicts carved on rocks",
+        "development of mauryan art"
+      ]
+    },
+    {
+      "name": "gupta empire",
+      "period": "320 ce to 550 ce",
+      "founder": "chandragupta i",
+      "capital": "pataliputra",
+      "religion": "hinduism with buddhism tolerance",
+      "major_rulers": [
+        {
+          "name": "chandragupta ii",
+          "reign": "375-415 ce",
+          "notes": "golden age, military expansion"
+        },
+        {
+          "name": "samudragupta",
+          "reign": "335-375 ce",
+          "notes": "warrior king, military conquests"
+        }
+      ],
+      "achievements": [
+        "advancement of mathematics including zero",
+        "classical sanskrit literature",
+        "aryabhata's astronomical calculations",
+        "kalidasa's plays and poems",
+        "advances in medicine and science",
+        "temple construction and sculpture"
+      ]
+    },
+    {
+      "name": "mughal empire",
+      "period": "1526 ce to 1857 ce",
+      "founder": "babur",
+      "capital": "delhi, agra",
+      "religion": "islam with hindu tolerance",
+      "major_rulers": [
+        {
+          "name": "akbar",
+          "reign": "1556-1605",
+          "notes": "administrative reforms, religious tolerance"
+        },
+        {
+          "name": "shah jahan",
+          "reign": "1628-1658",
+          "notes": "commissioned taj mahal"
+        }
+      ],
+      "achievements": [
+        "taj mahal construction",
+        "mughal architecture and gardens",
+        "administrative efficiency",
+        "cultural synthesis of hindu and islamic elements",
+        "expansion of trade and commerce",
+        "development of urdu language"
+      ]
+    },
+    {
+      "name": "chola empire",
+      "period": "850 ce to 1270 ce",
+      "founder": "vijayalaya chola",
+      "capital": "thanjavur",
+      "religion": "hinduism",
+      "major_rulers": [
+        {
+          "name": "raja raja chola i",
+          "reign": "985-1014 ce",
+          "notes": "great expansion, temple builder"
+        },
+        {
+          "name": "rajendra chola i",
+          "reign": "1014-1044 ce",
+          "notes": "maritime expansion to southeast asia"
+        }
+      ],
+      "achievements": [
+        "maritime power and trade networks",
+        "temple construction including brihadisvara",
+        "bronze sculpture and art",
+        "administrative excellence",
+        "spice trade control",
+        "influence across southeast asia"
+      ]
+    }
+  ],
+  "periods": [
+    {
+      "name": "ancient india",
+      "start": "3300 bce",
+      "end": "800 ce",
+      "characteristics": [
+        "indus valley civilization",
+        "vedic period",
+        "mauryan and gupta empires",
+        "development of hinduism and buddhism",
+        "advances in philosophy and mathematics"
+      ]
+    },
+    {
+      "name": "medieval india",
+      "start": "800 ce",
+      "end": "1526 ce",
+      "characteristics": [
+        "rajput kingdoms",
+        "delhi sultanate",
+        "south indian kingdoms",
+        "islamic and hindu cultural synthesis",
+        "development of temple architecture"
+      ]
+    },
+    {
+      "name": "colonial period",
+      "start": "1600 ce",
+      "end": "1947 ce",
+      "characteristics": [
+        "european trading companies",
+        "british east india company expansion",
+        "british rule and administration",
+        "independence struggle",
+        "social and educational reforms"
+      ]
+    },
+    {
+      "name": "modern india",
+      "start": "1947 ce",
+      "end": "present",
+      "characteristics": [
+        "independence and republic",
+        "democratic governance",
+        "economic development",
+        "technological advancement",
+        "emergence as global power"
+      ]
+    }
+  ],
+  "historical_figures": [
+    {
+      "name": "ashoka",
+      "period": "mauryan empire",
+      "role": "emperor",
+      "significance": "spread of buddhism and moral governance through edicts"
+    },
+    {
+      "name": "akbar the great",
+      "period": "mughal empire",
+      "role": "emperor",
+      "significance": "religious tolerance, administrative reforms, cultural patronage"
+    },
+    {
+      "name": "aryabhata",
+      "period": "gupta empire",
+      "role": "mathematician and astronomer",
+      "significance": "advances in mathematics, introduction of zero"
+    },
+    {
+      "name": "kalidasa",
+      "period": "gupta empire",
+      "role": "poet and playwright",
+      "significance": "classical sanskrit literature, literary masterpieces"
+    }
+  ],
+  "architectural_sites": [
+    {
+      "name": "taj mahal",
+      "location": "agra",
+      "period": "mughal",
+      "builder": "shah jahan",
+      "significance": "monument to love, architectural masterpiece"
+    },
+    {
+      "name": "brihadisvara temple",
+      "location": "thanjavur",
+      "period": "chola",
+      "builder": "raja raja chola i",
+      "significance": "bronze temple architecture, granite construction"
+    },
+    {
+      "name": "red fort",
+      "location": "delhi",
+      "period": "mughal",
+      "builder": "shah jahan",
+      "significance": "palace and fortress, seat of power"
+    },
+    {
+      "name": "ajanta caves",
+      "location": "maharashtra",
+      "period": "ancient",
+      "builder": "buddhist monks",
+      "significance": "rock-cut buddhist temples, murals and sculptures"
+    },
+    {
+      "name": "khajuraho temples",
+      "location": "central india",
+      "period": "medieval",
+      "builder": "chandela dynasty",
+      "significance": "intricate stone carving, architectural excellence"
+    }
+  ]
+}

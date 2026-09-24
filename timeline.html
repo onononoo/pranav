@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>timeline - indian history database</title>
+	<link rel="stylesheet" href="styles.css">
+	<style>
+		.timeline-container {
+			position: relative;
+			padding: 20px 0;
+		}
+
+		.timeline-line {
+			position: absolute;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 4px;
+			height: 100%;
+			background-color: #1084d7;
+		}
+
+		.timeline-entries {
+			position: relative;
+			padding: 20px 0;
+		}
+
+		.timeline-entry {
+			margin-bottom: 50px;
+			position: relative;
+		}
+
+		.timeline-entry:nth-child(odd) {
+			padding-right: 55%;
+			text-align: right;
+		}
+
+		.timeline-entry:nth-child(even) {
+			padding-left: 55%;
+			text-align: left;
+		}
+
+		.timeline-dot {
+			position: absolute;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 20px;
+			height: 20px;
+			background-color: #000080;
+			border: 3px solid #1084d7;
+			border-radius: 50%;
+			top: 20px;
+		}
+
+		.timeline-content {
+			background-color: #e8f4ff;
+			border: 1px solid #1084d7;
+			padding: 15px;
+			border-radius: 4px;
+		}
+
+		.timeline-content h4 {
+			color: #000080;
+			margin: 0 0 8px 0;
+			font-weight: bold;
+		}
+
+		.timeline-content p {
+			margin: 0;
+			font-size: 12px;
+			line-height: 1.5;
+		}
+
+		.period-label {
+			color: #1084d7;
+			font-weight: bold;
+			font-size: 14px;
+			margin-bottom: 5px;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<h1>historical timeline</h1>
+		<p>major events and periods in indian history</p>
+	</header>
+
+	<div class="container">
+		<div class="sidebar">
+			<div class="nav-box">
+				<div class="nav-box-title">navigation</div>
+				<ul>
+					<li><a href="index.html">back to main</a></li>
+					<li><a href="about.html">about</a></li>
+					<li><a href="#ancient-section">ancient period</a></li>
+					<li><a href="#medieval-section">medieval period</a></li>
+					<li><a href="#colonial-section">colonial period</a></li>
+					<li><a href="#modern-section">modern period</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="main-content">
+			<div class="content-box active">
+				<h2 id="ancient-section">ancient india timeline</h2>
+
+				<div class="timeline-container">
+					<div class="timeline-line"></div>
+					<div class="timeline-entries">
+						<div class="timeline-entry">
+							<div class="timeline-dot"></div>
+							<div class="timeline-content">
+								<div class="period-label">3300 bce</div>
+								<h4>indus valley civilization</h4>
+								<p>flourishing of one of the world's earliest urban civilizations with cities like harappa and mohenjo-daro</p>
+							</div>
+						</div>
+
+						<div class="timeline-entry">
+							<div class="timeline-dot"></div>
+							<div class="timeline-content">
+								<div class="period-label">1500-1200 bce</div>
+								<h4>vedic period begins</h4>
+								<p>arrival of indo-aryan peoples and composition of the rigveda, oldest vedic text</p>
+							</div>
+						</div>
+
+						<div class="timeline-entry">
+							<div class="timeline-dot"></div>
+							<div class="timeline-content">
+								<div class="period-label">600 bce</div>
+								<h4>birth of major religions</h4>
+								<p>emergence of buddhism through siddhartha gautama and other philosophical movements</p>
+							</div>
+						</div>
+
+						<div class="timeline-entry">
+							<div class="timeline-dot"></div>
+							<div class="timeline-content">
+								<div class="period-label">322 bce</div>
+								<h4>mauryan empire founded</h4>
+								<p>chandragupta maurya establishes centralized empire with capital at pataliputra</p>
+							</div>
+						</div>
+
+						<div class="timeline-entry">
+							<div class="timeline-dot"></div>
+							<div class="timeline-content">
+								<div class="period-label">268-232 bce</div>
+								<h4>ashoka's reign</h4>
+								<p>emperor ashoka converts to buddhism and spreads dharma through rock edicts across the empire</p>
+							</div>
+						</div>
+
+						<div class="timeline-entry">
+							<div class="timeline-dot"></div>
+							<div class="timeline-content">
+								<div class="period-label">320 ce</div>
+								<h4>gupta empire founded</h4>
+								<p>chandragupta i establishes the gupta dynasty, beginning india's golden age</p>
+							</div>
+						</div>
+
+						<div class="timeline-entry">
+							<div class="timeline-dot"></div>
+							<div class="timeline-content">
+								<div class="period-label">375-415 ce</div>
+								<h4>chandragupta ii's reign</h4>
+								<p>golden age continues with advances in mathematics, astronomy, literature and arts</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<h2 id="medieval-section">medieval india timeline</h2>
+
+				<div class="timeline-container">
+					<div class="timeline-line"></div>
+					<div class="timeline-entries">
+						<div class="timeline-entry">
+							<div class="timeline-dot"></div>
+							<div class="timeline-content">
+								<div class="period-label">850 ce</div>
+								<h4>chola dynasty rise</h4>
+								<p>chola empire emerges as major maritime and military power in south india</p>
+							</div>
+						</div>
+
+						<div class="timeline-entry">
+							<div class="timeline-dot"></div>
+							<div class="timeline-content">
+								<div class="period-label">985-1014 ce</div>
+								<h4>raja raja chola i</h4>
+								<p>chola empire reaches peak with great expansion and construction of brihadisvara temple</p>
+							</div>
+						</div>
+
+						<div class="timeline-entry">
+							<div class="timeline-dot"></div>
+							<div class="timeline-content">
+								<div class="period-label">1191 ce</div>
+								<h4>delhi sultanate established</h4>
+								<p>qutubuddin aibak founds delhi sultanate, marking beginning of islamic rule in north india</p>
+							</div>
+						</div>
+
+						<div class="timeline-entry">
+							<div class="timeline-dot"></div>
+							<div class="timeline-content">
+								<div class="period-label">1336 ce</div>
+								<h4>vijayanagara empire founded</h4>
+								<p>vijayanagara emerges as major south indian power with sophisticated administration</p>
+							</div>
+						</div>
+
+						<div class="timeline-entry">
+							<div class="timeline-dot"></div>
+							<div class="timeline-content">
+								<div class="period-label">1526 ce</div>
+								<h4>mughal empire founded</h4>
+								<p>babur defeats ibrahim lodi at panipat and establishes mughal dynasty</p>
+							</div>
+						</div>
+
+						<div class="timeline-entry">
+							<div class="timeline-dot"></div>
+							<div class="timeline-content">
+								<div class="period-label">1556-1605 ce</div>
+								<h4>akbar the great's reign</h4>
+								<p>mughal empire reaches zenith with administrative reforms and religious tolerance</p>
+							</div>
+						</div>
+
+						<div class="timeline-entry">
+							<div class="timeline-dot"></div>
+							<div class="timeline-content">
+								<div class="period-label">1632-1653 ce</div>
+								<h4>taj mahal construction</h4>
+								<p>shah jahan commissions taj mahal as monument to his wife mumtaz mahal</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<h2 id="colonial-section">colonial period timeline</h2>
+
+				<div class="timeline-container">
+					<div class="timeline-line"></div>
+					<div class="timeline-entries">
+						<div class="timeline-entry">
+							<div class="timeline-dot"></div>
+							<div class="timeline-content">
+								<div class="period-label">1600 ce</div>
+								<h4>british east india company founded</h4>
+								<p>company begins trading operations in india with establishment of trading posts</p>
+							</div>
+						</div>
+
+						<div class="timeline-entry">
+							<div class="timeline-dot"></div>
+							<div class="timeline-content">
+								<div class="period-label">1757 ce</div>
+								<h4>battle of plassey</h4>
+								<p>british victory marks effective control over bengal and beginning of territorial expansion</p>
+							</div>
+						</div>
+
+						<div class="timeline-entry">
+							<div class="timeline-dot"></div>
+							<div class="timeline-content">
+								<div class="period-label">1858 ce</div>
+								<h4>india becomes crown colony</h4>
+								<p>british crown assumes direct control following suppression of indian rebellion</p>
+							</div>
+						</div>
+
+						<div class="timeline-entry">
+							<div class="timeline-dot"></div>
+							<div class="timeline-content">
+								<div class="period-label">1885 ce</div>
+								<h4>indian national congress formed</h4>
+								<p>establishment of political organization that would lead independence movement</p>
+							</div>
+						</div>
+
+						<div class="timeline-entry">
+							<div class="timeline-dot"></div>
+							<div class="timeline-content">
+								<div class="period-label">1920s-1940s</div>
+								<h4>independence struggle intensifies</h4>
+								<p>non-cooperation movement, civil disobedience, and quit india movement challenge british rule</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<h2 id="modern-section">modern india timeline</h2>
+
+				<div class="timeline-container">
+					<div class="timeline-line"></div>
+					<div class="timeline-entries">
+						<div class="timeline-entry">
+							<div class="timeline-dot"></div>
+							<div class="timeline-content">
+								<div class="period-label">1947 ce</div>
+								<h4>independence achieved</h4>
+								<p>india gains independence from british rule with partition creating pakistan</p>
+							</div>
+						</div>
+
+						<div class="timeline-entry">
+							<div class="timeline-dot"></div>
+							<div class="timeline-content">
+								<div class="period-label">1950 ce</div>
+								<h4>republic proclaimed</h4>
+								<p>india becomes sovereign democratic republic with adoption of constitution</p>
+							</div>
+						</div>
+
+						<div class="timeline-entry">
+							<div class="timeline-dot"></div>
+							<div class="timeline-content">
+								<div class="period-label">1960s-1970s</div>
+								<h4>nation building era</h4>
+								<p>five-year plans, industrialization, and infrastructure development shape modern india</p>
+							</div>
+						</div>
+
+						<div class="timeline-entry">
+							<div class="timeline-dot"></div>
+							<div class="timeline-content">
+								<div class="period-label">1991 ce</div>
+								<h4>economic liberalization</h4>
+								<p>india opens economy to global markets, beginning technological advancement</p>
+							</div>
+						</div>
+
+						<div class="timeline-entry">
+							<div class="timeline-dot"></div>
+							<div class="timeline-content">
+								<div class="period-label">2000s-present</div>
+								<h4>global emergence</h4>
+								<p>india becomes technological powerhouse, space explorer, and major global player</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="status-bar">timeline view</div>
+</body>
+</html>
