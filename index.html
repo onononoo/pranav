@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>indian history database</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<header>
+		<h1>indian history database</h1>
+		<p>explore the rich tapestry of the indian subcontinent</p>
+	</header>
+
+	<div class="container">
+		<div class="sidebar">
+			<div class="nav-box">
+				<div class="nav-box-title">navigation</div>
+				<ul>
+					<li><a href="#" data-section="ancient" onclick="showContent('ancient'); return false;">ancient india</a></li>
+					<li><a href="#" data-section="medieval" onclick="showContent('medieval'); return false;">medieval india</a></li>
+					<li><a href="#" data-section="colonial" onclick="showContent('colonial'); return false;">colonial period</a></li>
+					<li><a href="#" data-section="modern" onclick="showContent('modern'); return false;">modern india</a></li>
+				</ul>
+			</div>
+
+			<div class="nav-box">
+				<div class="nav-box-title">search</div>
+				<input type="text" id="search-box" placeholder="search content..." style="width: 100%; padding: 4px; margin: 5px 0; box-sizing: border-box;">
+				<button id="search-button" style="width: 100%; margin-top: 5px;">search</button>
+			</div>
+
+			<div class="nav-box">
+				<div class="nav-box-title">empire timelines</div>
+				<ul>
+					<li><a href="#" onclick="toggleDynasty('mauryan'); return false;">mauryan empire</a></li>
+					<li><a href="#" onclick="toggleDynasty('gupta'); return false;">gupta empire</a></li>
+					<li><a href="#" onclick="toggleDynasty('mughal'); return false;">mughal empire</a></li>
+					<li><a href="#" onclick="toggleDynasty('chola'); return false;">chola empire</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="main-content">
+			<div id="ancient" class="content-box active">
+				<h2>ancient india</h2>
+
+				<h3>indus valley civilization</h3>
+				<p>the indus valley civilization was one of the world's earliest urban civilizations, flourishing in the north-western region of the indian subcontinent. this remarkable civilization developed sophisticated systems of urban planning with well-organized cities like harappa and mohenjo-daro.</p>
+
+				<div class="info-box">
+					<strong>key characteristics:</strong> standardized weights and measures, advanced drainage systems, undeciphered script, planned grid layouts, terracotta figurines
+				</div>
+
+				<h3>vedic period</h3>
+				<p>the vedic period marked the arrival of indo-aryan peoples and the composition of the rigveda, the oldest of the four vedas. this era established the intellectual and religious foundations of hindu philosophy.</p>
+
+				<ul>
+					<li>composition of the four vedas: rigveda, yajurveda, samaveda, atharvaveda</li>
+					<li>development of the caste system and social hierarchies</li>
+					<li>vedic rituals and sacrificial practices</li>
+					<li>emergence of upanishadic philosophy</li>
+				</ul>
+
+				<h3>major empires</h3>
+
+				<div id="mauryan" style="display: none;">
+					<h4>mauryan empire</h4>
+					<p>founded by chandragupta maurya in 322 bce, the mauryan empire was one of the largest empires of ancient india. it reached its zenith under ashoka the great, who was deeply influenced by buddhism.</p>
+
+					<table>
+						<tr>
+							<th>ruler</th>
+							<th>major contribution</th>
+						</tr>
+						<tr>
+							<td>chandragupta maurya</td>
+							<td>founded the empire and established centralized administration</td>
+						</tr>
+						<tr>
+							<td>ashoka the great</td>
+							<td>spread buddhism and established rock edicts throughout the realm</td>
+						</tr>
+						<tr>
+							<td>bindusara</td>
+							<td>expanded the empire and ruled with wisdom</td>
+						</tr>
+					</table>
+				</div>
+
+				<div id="gupta" style="display: none;">
+					<h4>gupta empire</h4>
+					<p>the gupta empire is often called the golden age of india, a period of remarkable cultural and scientific advancement. the reign of chandragupta ii marked the empire's greatest territorial expansion and cultural flourishing.</p>
+
+					<div class="info-box">
+						<strong>achievements:</strong> advances in mathematics including the concept of zero and decimal system, astronomical calculations, classical sanskrit literature, kalidasa's plays, aryabhata's mathematical treatise
+					</div>
+				</div>
+			</div>
+
+			<div id="medieval" class="content-box">
+				<h2>medieval india</h2>
+
+				<h3>rajput kingdoms</h3>
+				<p>the rajput kingdoms emerged as powerful political forces in north india following the decline of the gupta empire. these warrior-ruled kingdoms maintained their independence and military prowess for centuries.</p>
+
+				<ul>
+					<li>mewar kingdom under maharana pratap - known for resistance against invasions</li>
+					<li>marwar kingdom - controlled the rajasthan region</li>
+					<li>amber kingdom - later became jaipur</li>
+					<li>chittorgarh - famous for its fort and battles</li>
+				</ul>
+
+				<h3>delhi sultanate</h3>
+				<p>the delhi sultanate was established and ruled north india for several centuries. it was founded by qutubuddin aibak and marked the beginning of islamic rule in india. multiple dynasties ruled during this period including the tughlak dynasty.</p>
+
+				<div id="mughal" style="display: none;">
+					<h4>mughal empire</h4>
+					<p>the mughal empire was one of the most powerful and culturally rich empires in indian history. founded by babur in 1526, it reached its zenith under akbar the great and aurangzeb.</p>
+
+					<table>
+						<tr>
+							<th>emperor</th>
+							<th>period</th>
+							<th>legacy</th>
+						</tr>
+						<tr>
+							<td>babur</td>
+							<td>1526-1530</td>
+							<td>founded the empire through military conquest</td>
+						</tr>
+						<tr>
+							<td>akbar</td>
+							<td>1556-1605</td>
+							<td>administrative reforms, religious tolerance, art patronage</td>
+						</tr>
+						<tr>
+							<td>shah jahan</td>
+							<td>1628-1658</td>
+							<td>commissioned the taj mahal and fort architecture</td>
+						</tr>
+						<tr>
+							<td>aurangzeb</td>
+							<td>1658-1707</td>
+							<td>expanded the empire to its largest extent</td>
+						</tr>
+					</table>
+
+					<h5>architectural achievements</h5>
+					<ul>
+						<li>taj mahal - monument to love built by shah jahan</li>
+						<li>red fort - mughal palace and fortress in delhi</li>
+						<li>buland darwaza - gate of magnificence in fatehpur sikri</li>
+						<li>mausoleum of humayun - indo-islamic architecture</li>
+					</ul>
+				</div>
+
+				<h3>southern kingdoms</h3>
+
+				<div id="chola" style="display: none;">
+					<h4>chola empire</h4>
+					<p>the chola dynasty was a maritime empire controlling much of south india and the indian ocean region. known for extensive trade networks and architectural excellence, particularly in temple construction.</p>
+
+					<div class="info-box">
+						<strong>maritime prowess:</strong> controlled spice trade routes, established trading posts in southeast asia, powerful naval fleet
+					</div>
+				</div>
+
+				<h4>vijayanagara empire</h4>
+				<p>the vijayanagara empire was a major power in south india, known for its sophisticated administration, architectural patronage, and cultural achievements. the empire lasted from 1336 to 1646 and was a center of hindu culture.</p>
+			</div>
+
+			<div id="colonial" class="content-box">
+				<h2>colonial period</h2>
+
+				<h3>european arrival</h3>
+				<p>european trading companies arrived in india seeking spices and wealth. the portuguese were first, followed by the dutch, french, and eventually the british who would dominate the subcontinent.</p>
+
+				<div class="timeline">
+					<div class="timeline-item">
+						<strong>1600s:</strong> british east india company establishes trading posts in calcutta, madras, and bombay
+					</div>
+					<div class="timeline-item">
+						<strong>1757:</strong> battle of plassey marks british control over bengal
+					</div>
+					<div class="timeline-item">
+						<strong>1858:</strong> indian rebellion crushed; india becomes direct crown colony
+					</div>
+					<div class="timeline-item">
+						<strong>late 1800s:</strong> rise of indian national congress and independence movement
+					</div>
+				</div>
+
+				<h3>british rule changes</h3>
+				<ul>
+					<li>introduction of english education and modern administration</li>
+					<li>construction of extensive railway network</li>
+					<li>exploitation of natural resources and agricultural wealth</li>
+					<li>suppression of traditional industries like textiles</li>
+					<li>introduction of western ideas that sparked nationalist sentiment</li>
+				</ul>
+
+				<h3>independence struggle</h3>
+				<p>the independence movement gained momentum in the 20th century, with leaders promoting non-violent resistance and civil disobedience. key movements included:</p>
+
+				<ul>
+					<li>khilafat movement</li>
+					<li>non-cooperation movement</li>
+					<li>salt march and civil disobedience</li>
+					<li>quit india movement</li>
+				</ul>
+			</div>
+
+			<div id="modern" class="content-box">
+				<h2>modern india</h2>
+
+				<h3>independence and partition</h3>
+				<p>india achieved independence from british rule and was declared a sovereign republic. however, the partition of british india into india and pakistan resulted in one of history's largest mass migrations and communal violence.</p>
+
+				<div class="info-box">
+					<strong>partition impact:</strong> millions displaced, millions killed, two independent nations created with different religious and political foundations
+				</div>
+
+				<h3>republic and constitution</h3>
+				<p>the indian constitution, drafted by dr. ambedkar and adopted, established india as a democratic republic with:</p>
+
+				<ul>
+					<li>universal adult suffrage and democratic voting rights</li>
+					<li>fundamental rights and duties of citizens</li>
+					<li>separation of powers between executive, legislative, and judicial branches</li>
+					<li>protection of minority rights and religious freedom</li>
+				</ul>
+
+				<h3>economic development</h3>
+				<p>modern india has undergone significant transformation:</p>
+
+				<table>
+					<tr>
+						<th>era</th>
+						<th>focus</th>
+					</tr>
+					<tr>
+						<td>1950s-1970s</td>
+						<td>nation building, five-year plans, industrialization</td>
+					</tr>
+					<tr>
+						<td>1980s-1990s</td>
+						<td>economic liberalization and reforms</td>
+					</tr>
+					<tr>
+						<td>2000s-present</td>
+						<td>technological advancement, global integration, space exploration</td>
+					</tr>
+				</table>
+
+				<h3>contemporary achievements</h3>
+				<ul>
+					<li>world's largest film industry (bollywood)</li>
+					<li>leader in information technology and software services</li>
+					<li>space program achievements including mars missions</li>
+					<li>pharmaceutical and biotechnology advancement</li>
+					<li>largest democracy by population in the world</li>
+					<li>emerging global economic power</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="status-bar" id="status-bar">ready</div>
+	<script src="script.js"></script>
+</body>
+</html>
