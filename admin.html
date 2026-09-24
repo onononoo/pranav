@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>admin panel - database management</title>
+<style>
+body { font-family: arial; font-size: 12px; margin: 0; padding: 5px; background: #fff; }
+input, textarea { font-family: arial; font-size: 12px; padding: 2px; }
+button { font-family: arial; font-size: 12px; padding: 3px 10px; margin: 2px; }
+table { border-collapse: collapse; width: 100%; margin: 10px 0; }
+td, th { border: 1px solid #000; padding: 3px; }
+th { background: #c0c0c0; }
+.nav { margin-bottom: 10px; padding: 5px; border: 1px solid #000; }
+.form-group { margin: 10px 0; }
+.form-group label { display: block; font-weight: bold; margin-bottom: 3px; }
+.form-group input, .form-group textarea { width: 100%; box-sizing: border-box; }
+#records { margin: 20px 0; }
+</style>
+<script>
+var records = [
+	{ id: 1, name: 'mauryan empire', type: 'empire', year: '322 bce' },
+	{ id: 2, name: 'gupta empire', type: 'empire', year: '320 ce' },
+	{ id: 3, name: 'mughal empire', type: 'empire', year: '1526 ce' },
+	{ id: 4, name: 'ashoka', type: 'figure', year: '268 bce' },
+	{ id: 5, name: 'taj mahal', type: 'site', year: '1632 ce' }
+];
+
+function displayRecords() {
+	var html = '<table><tr><th>id</th><th>name</th><th>type</th><th>year</th><th>action</th></tr>';
+	for (var i = 0; i < records.length; i++) {
+		html += '<tr><td>' + records[i].id + '</td><td>' + records[i].name + '</td><td>' + records[i].type + '</td><td>' + records[i].year + '</td><td><button onclick="deleteRecord(' + records[i].id + ')">delete</button></td></tr>';
+	}
+	html += '</table>';
+	document.getElementById('records').innerHTML = html;
+}
+
+function addRecord() {
+	var name = document.getElementById('name').value;
+	var type = document.getElementById('type').value;
+	var year = document.getElementById('year').value;
+
+	if (!name || !type || !year) {
+		alert('please fill all fields');
+		return;
+	}
+
+	var id = records.length > 0 ? Math.max.apply(Math, records.map(function(r) { return r.id; })) + 1 : 1;
+	records.push({ id: id, name: name, type: type, year: year });
+
+	document.getElementById('name').value = '';
+	document.getElementById('type').value = '';
+	document.getElementById('year').value = '';
+
+	displayRecords();
+	updateStats();
+}
+
+function deleteRecord(id) {
+	records = records.filter(function(r) { return r.id !== id; });
+	displayRecords();
+	updateStats();
+}
+
+function updateStats() {
+	var total = records.length;
+	var empires = records.filter(function(r) { return r.type === 'empire'; }).length;
+	var figures = records.filter(function(r) { return r.type === 'figure'; }).length;
+	var sites = records.filter(function(r) { return r.type === 'site'; }).length;
+
+	var html = '<p><strong>database statistics:</strong></p>';
+	html += '<p>total records: ' + total + '</p>';
+	html += '<p>empires: ' + empires + '</p>';
+	html += '<p>figures: ' + figures + '</p>';
+	html += '<p>sites: ' + sites + '</p>';
+	document.getElementById('stats').innerHTML = html;
+}
+
+function exportData() {
+	var json = JSON.stringify(records, null, 2);
+	alert('json export:\\n' + json);
+}
+
+window.addEventListener('DOMContentLoaded', function() {
+	displayRecords();
+	updateStats();
+});
+</script>
+</head>
+<body>
+
+<h1>database admin panel</h1>
+
+<div class="nav">
+<a href="main.html">home</a> |
+<a href="admin.html">admin</a>
+</div>
+
+<h2>add new record</h2>
+
+<div class="form-group">
+	<label>record name:</label>
+	<input type="text" id="name" placeholder="enter name">
+</div>
+
+<div class="form-group">
+	<label>record type:</label>
+	<select id="type">
+		<option value="">-- select type --</option>
+		<option value="empire">empire</option>
+		<option value="figure">figure</option>
+		<option value="site">site</option>
+		<option value="dynasty">dynasty</option>
+		<option value="event">event</option>
+	</select>
+</div>
+
+<div class="form-group">
+	<label>year/period:</label>
+	<input type="text" id="year" placeholder="e.g. 322 bce or 1526 ce">
+</div>
+
+<button onclick="addRecord()">add record</button>
+<button onclick="exportData()">export json</button>
+
+<h2>database records</h2>
+<div id="records"></div>
+
+<h2>statistics</h2>
+<div id="stats"></div>
+
+<h2>instructions</h2>
+<p>this admin panel allows you to manage the database records. you can:</p>
+<ul>
+<li>add new records with name, type, and year</li>
+<li>view all records in table format</li>
+<li>delete records with delete button</li>
+<li>view database statistics</li>
+<li>export records as json</li>
+</ul>
+
+</body>
+</html>

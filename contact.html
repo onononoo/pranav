@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>contact - indian history database</title>
+<style>
+body { font-family: arial; font-size: 12px; margin: 0; padding: 5px; background: #fff; }
+input, textarea, select { font-family: arial; font-size: 12px; padding: 2px; }
+button { font-family: arial; font-size: 12px; padding: 3px 10px; }
+.nav { margin-bottom: 10px; padding: 5px; border: 1px solid #000; }
+.form-group { margin: 10px 0; }
+.form-group label { display: block; font-weight: bold; margin-bottom: 3px; }
+.form-group input, .form-group textarea { width: 100%; box-sizing: border-box; margin-top: 3px; }
+.form-group textarea { min-height: 100px; }
+#message { margin-top: 20px; padding: 10px; border: 1px solid #ccc; display: none; }
+</style>
+<script>
+function submitForm() {
+	var name = document.getElementById('name').value;
+	var email = document.getElementById('email').value;
+	var subject = document.getElementById('subject').value;
+	var message = document.getElementById('messagebox').value;
+	var category = document.getElementById('category').value;
+
+	if (!name || !email || !subject || !message || !category) {
+		alert('please fill all fields');
+		return;
+	}
+
+	var msg = document.getElementById('message');
+	msg.innerHTML = '<strong>thank you ' + name + '!</strong><p>your message has been recorded. we will respond to ' + email + ' as soon as possible.</p>';
+	msg.style.display = 'block';
+
+	document.getElementById('contactForm').reset();
+}
+
+function clearForm() {
+	document.getElementById('contactForm').reset();
+	document.getElementById('message').style.display = 'none';
+}
+</script>
+</head>
+<body>
+
+<h1>contact us</h1>
+
+<div class="nav">
+<a href="main.html">home</a> |
+<a href="contact.html">contact</a>
+</div>
+
+<h2>feedback and inquiries</h2>
+<p>have feedback, corrections, or inquiries about the database? use the form below to contact us.</p>
+
+<form id="contactForm">
+<div class="form-group">
+	<label for="name">your name:</label>
+	<input type="text" id="name" placeholder="enter your name">
+</div>
+
+<div class="form-group">
+	<label for="email">email address:</label>
+	<input type="text" id="email" placeholder="enter your email">
+</div>
+
+<div class="form-group">
+	<label for="category">inquiry type:</label>
+	<select id="category">
+		<option value="">-- select type --</option>
+		<option value="error">error report</option>
+		<option value="suggestion">suggestion</option>
+		<option value="addition">content addition</option>
+		<option value="question">question</option>
+		<option value="other">other</option>
+	</select>
+</div>
+
+<div class="form-group">
+	<label for="subject">subject:</label>
+	<input type="text" id="subject" placeholder="brief subject">
+</div>
+
+<div class="form-group">
+	<label for="messagebox">message:</label>
+	<textarea id="messagebox" placeholder="detailed message..."></textarea>
+</div>
+
+<button type="button" onclick="submitForm()">submit</button>
+<button type="button" onclick="clearForm()">clear</button>
+</form>
+
+<div id="message"></div>
+
+<h2>other ways to reach us</h2>
+<ul>
+<li>email: info@indianhistorydb.org</li>
+<li>mailing address: history research center, new delhi</li>
+<li>phone: contact through website inquiry form</li>
+</ul>
+
+<h2>faq</h2>
+<h3>how accurate is the database?</h3>
+<p>the database is compiled from scholarly historical research and published sources. however, historical interpretation can vary. we encourage feedback on any inaccuracies.</p>
+
+<h3>can i use this for academic work?</h3>
+<p>yes, this database is suitable for academic reference. please cite appropriately when using information.</p>
+
+<h3>how often is the database updated?</h3>
+<p>the database is updated periodically with new research and information. check the main page for latest updates.</p>
+
+<h3>can i contribute content?</h3>
+<p>we welcome contributions from researchers and historians. please contact us with your proposals and credentials.</p>
+
+</body>
+</html>

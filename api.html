@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>api documentation</title>
+<style>
+body { font-family: arial, courier; font-size: 12px; margin: 0; padding: 5px; background: #fff; }
+table { border-collapse: collapse; width: 100%; margin: 10px 0; }
+td, th { border: 1px solid #000; padding: 3px; text-align: left; }
+th { background: #c0c0c0; }
+a { color: #0000ff; text-decoration: underline; }
+.nav { margin-bottom: 10px; padding: 5px; border: 1px solid #000; }
+.code { background: #f0f0f0; padding: 5px; margin: 5px 0; font-family: courier; border: 1px solid #ddd; overflow-x: auto; }
+h2 { margin-top: 15px; }
+</style>
+</head>
+<body>
+
+<h1>api documentation</h1>
+
+<div class="nav">
+<a href="main.html">home</a> |
+<a href="api.html">api</a> |
+<a href="admin.html">admin</a>
+</div>
+
+<h2>overview</h2>
+<p>the indian history database provides api endpoints for accessing historical data programmatically. all endpoints return json format responses.</p>
+
+<h2>base url</h2>
+<div class="code">http://indianhistorydb.local/api/v1/</div>
+
+<h2>endpoints</h2>
+
+<h3>get all empires</h3>
+<div class="code">get /empires</div>
+<p>returns list of all empires in database</p>
+<table>
+<tr>
+<th>field</th>
+<th>type</th>
+<th>description</th>
+</tr>
+<tr>
+<td>id</td>
+<td>integer</td>
+<td>unique identifier</td>
+</tr>
+<tr>
+<td>name</td>
+<td>string</td>
+<td>empire name</td>
+</tr>
+<tr>
+<td>period</td>
+<td>string</td>
+<td>dates of reign</td>
+</tr>
+<tr>
+<td>founder</td>
+<td>string</td>
+<td>founder name</td>
+</tr>
+<tr>
+<td>capital</td>
+<td>string</td>
+<td>capital city</td>
+</tr>
+</table>
+
+<h3>get empire by id</h3>
+<div class="code">get /empires/[id]</div>
+<p>returns single empire record with detailed information</p>
+
+<h3>get all figures</h3>
+<div class="code">get /figures</div>
+<p>returns list of all historical figures</p>
+<table>
+<tr>
+<th>field</th>
+<th>type</th>
+<th>description</th>
+</tr>
+<tr>
+<td>id</td>
+<td>integer</td>
+<td>unique identifier</td>
+</tr>
+<tr>
+<td>name</td>
+<td>string</td>
+<td>figure name</td>
+</tr>
+<tr>
+<td>period</td>
+<td>string</td>
+<td>time period</td>
+</tr>
+<tr>
+<td>role</td>
+<td>string</td>
+<td>role or title</td>
+</tr>
+<tr>
+<td>significance</td>
+<td>string</td>
+<td>historical significance</td>
+</tr>
+</table>
+
+<h3>get all sites</h3>
+<div class="code">get /sites</div>
+<p>returns list of all archaeological sites</p>
+
+<h3>search</h3>
+<div class="code">get /search?q=[query]</div>
+<p>search across all content types. query parameter required. minimum 2 characters.</p>
+
+<h2>response format</h2>
+
+<h3>success response</h3>
+<div class="code">{
+  "status": "success",
+  "data": [
+    { "id": 1, "name": "mauryan empire", ... }
+  ],
+  "count": 1
+}</div>
+
+<h3>error response</h3>
+<div class="code">{
+  "status": "error",
+  "message": "not found",
+  "code": 404
+}</div>
+
+<h2>status codes</h2>
+<table>
+<tr>
+<th>code</th>
+<th>meaning</th>
+</tr>
+<tr>
+<td>200</td>
+<td>success - request completed</td>
+</tr>
+<tr>
+<td>400</td>
+<td>bad request - invalid parameters</td>
+</tr>
+<tr>
+<td>404</td>
+<td>not found - resource does not exist</td>
+</tr>
+<tr>
+<td>500</td>
+<td>server error - internal error</td>
+</tr>
+</table>
+
+<h2>example requests</h2>
+
+<h3>get all empires</h3>
+<div class="code">curl http://indianhistorydb.local/api/v1/empires</div>
+
+<h3>get specific empire</h3>
+<div class="code">curl http://indianhistorydb.local/api/v1/empires/1</div>
+
+<h3>search</h3>
+<div class="code">curl http://indianhistorydb.local/api/v1/search?q=ashoka</div>
+
+<h2>rate limiting</h2>
+<p>api requests are limited to 100 requests per minute per ip address. exceeding this limit will result in 429 (too many requests) response.</p>
+
+<h2>authentication</h2>
+<p>currently, the api does not require authentication for read-only endpoints. write operations (post, put, delete) require api key.</p>
+
+<h2>cors policy</h2>
+<p>cross-origin requests are allowed from specified domains. contact administrator for cors whitelist additions.</p>
+
+</body>
+</html>

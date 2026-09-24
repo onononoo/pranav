@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>statistics - indian history database</title>
+<style>
+body { font-family: arial; font-size: 12px; margin: 0; padding: 5px; background: #fff; }
+table { border-collapse: collapse; width: 100%; margin: 10px 0; }
+td, th { border: 1px solid #000; padding: 3px; }
+th { background: #c0c0c0; }
+a { color: #0000ff; text-decoration: underline; }
+.nav { margin-bottom: 10px; padding: 5px; border: 1px solid #000; }
+.stat-box { margin: 10px 0; padding: 10px; border: 1px solid #ccc; }
+</style>
+<script>
+function generateStats() {
+	var stats = {
+		empires: 5,
+		dynasties: 10,
+		figures: 25,
+		sites: 15,
+		pages: 20,
+		periods: 4
+	};
+
+	var html = '<h2>database overview</h2>';
+	html += '<table><tr><th>category</th><th>count</th></tr>';
+	html += '<tr><td>empires</td><td>' + stats.empires + '</td></tr>';
+	html += '<tr><td>dynasties</td><td>' + stats.dynasties + '</td></tr>';
+	html += '<tr><td>historical figures</td><td>' + stats.figures + '</td></tr>';
+	html += '<tr><td>archaeological sites</td><td>' + stats.sites + '</td></tr>';
+	html += '<tr><td>pages in database</td><td>' + stats.pages + '</td></tr>';
+	html += '<tr><td>time periods</td><td>' + stats.periods + '</td></tr>';
+	html += '</table>';
+
+	document.getElementById('content').innerHTML = html;
+}
+
+window.addEventListener('DOMContentLoaded', generateStats);
+</script>
+</head>
+<body>
+
+<h1>database statistics</h1>
+
+<div class="nav">
+<a href="main.html">home</a> |
+<a href="stats.html">statistics</a> |
+<a href="admin.html">admin</a>
+</div>
+
+<div id="content"></div>
+
+<h2>timeline distribution</h2>
+<table>
+<tr>
+<th>period</th>
+<th>start</th>
+<th>end</th>
+<th>duration</th>
+<th>records</th>
+</tr>
+<tr>
+<td>ancient india</td>
+<td>3300 bce</td>
+<td>800 ce</td>
+<td>4100 years</td>
+<td>15</td>
+</tr>
+<tr>
+<td>medieval india</td>
+<td>800 ce</td>
+<td>1526 ce</td>
+<td>726 years</td>
+<td>20</td>
+</tr>
+<tr>
+<td>colonial period</td>
+<td>1600 ce</td>
+<td>1947 ce</td>
+<td>347 years</td>
+<td>18</td>
+</tr>
+<tr>
+<td>modern india</td>
+<td>1947 ce</td>
+<td>present</td>
+<td>~79 years</td>
+<td>22</td>
+</tr>
+</table>
+
+<h2>regional distribution</h2>
+<table>
+<tr>
+<th>region</th>
+<th>empires</th>
+<th>sites</th>
+<th>figures</th>
+</tr>
+<tr>
+<td>north india</td>
+<td>4</td>
+<td>8</td>
+<td>12</td>
+</tr>
+<tr>
+<td>south india</td>
+<td>3</td>
+<td>5</td>
+<td>7</td>
+</tr>
+<tr>
+<td>central india</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+</tr>
+<tr>
+<td>northeast india</td>
+<td>1</td>
+<td>2</td>
+<td>2</td>
+</tr>
+</table>
+
+<h2>type distribution</h2>
+<table>
+<tr>
+<th>record type</th>
+<th>quantity</th>
+<th>percentage</th>
+</tr>
+<tr>
+<td>empires</td>
+<td>5</td>
+<td>15%</td>
+</tr>
+<tr>
+<td>dynasties</td>
+<td>10</td>
+<td>29%</td>
+</tr>
+<tr>
+<td>historical figures</td>
+<td>25</td>
+<td>31%</td>
+</tr>
+<tr>
+<td>archaeological sites</td>
+<td>15</td>
+<td>25%</td>
+</tr>
+</table>
+
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>search - indian history database</title>
+<style>
+body { font-family: arial; font-size: 12px; margin: 0; padding: 5px; background: #fff; }
+input { font-family: arial; font-size: 12px; padding: 2px; }
+button { font-family: arial; font-size: 12px; padding: 3px 10px; }
+.nav { margin-bottom: 10px; padding: 5px; border: 1px solid #000; }
+a { color: #0000ff; text-decoration: underline; }
+table { border-collapse: collapse; width: 100%; margin-top: 10px; }
+td, th { border: 1px solid #000; padding: 3px; }
+th { background: #c0c0c0; }
+.result { margin: 10px 0; padding: 5px; border: 1px solid #ccc; }
+</style>
+<script>
+function searchDatabase() {
+	var query = document.getElementById('query').value.toLowerCase();
+	var results = document.getElementById('results');
+
+	if (query.length < 2) {
+		results.innerHTML = '<p>please enter at least 2 characters</p>';
+		return;
+	}
+
+	var allData = [
+		{ title: 'ashoka', type: 'figure', desc: 'mauryan emperor who spread buddhism' },
+		{ title: 'akbar', type: 'figure', desc: 'mughal emperor known for religious tolerance' },
+		{ title: 'taj mahal', type: 'site', desc: 'monument built by shah jahan' },
+		{ title: 'harappa', type: 'site', desc: 'indus valley civilization city' },
+		{ title: 'mauryan empire', type: 'empire', desc: 'founded by chandragupta maurya' },
+		{ title: 'gupta empire', type: 'empire', desc: 'golden age of classical india' },
+		{ title: 'mughal empire', type: 'empire', desc: 'indo-islamic dynasty' },
+		{ title: 'vedic period', type: 'period', desc: 'era of vedic literature and rituals' },
+		{ title: 'vedas', type: 'term', desc: 'ancient sacred texts of hinduism' },
+		{ title: 'aryabhata', type: 'figure', desc: 'mathematician and astronomer of gupta era' },
+		{ title: 'kalidasa', type: 'figure', desc: 'classical sanskrit playwright' },
+		{ title: 'delhi sultanate', type: 'empire', desc: 'islamic rule in north india' },
+		{ title: 'chola empire', type: 'empire', desc: 'maritime power in south india' },
+		{ title: 'vijayanagara', type: 'empire', desc: 'major south indian kingdom' },
+		{ title: 'british east india company', type: 'org', desc: 'trading company that ruled india' },
+		{ title: 'partition', type: 'event', desc: 'division of india and creation of pakistan' }
+	];
+
+	var matches = allData.filter(function(item) {
+		return item.title.includes(query) || item.desc.includes(query);
+	});
+
+	var html = '<p>found ' + matches.length + ' result(s)</p>';
+	if (matches.length > 0) {
+		html += '<table><tr><th>title</th><th>type</th><th>description</th></tr>';
+		for (var i = 0; i < matches.length; i++) {
+			html += '<tr><td>' + matches[i].title + '</td><td>' + matches[i].type + '</td><td>' + matches[i].desc + '</td></tr>';
+		}
+		html += '</table>';
+	}
+	results.innerHTML = html;
+}
+
+function clearSearch() {
+	document.getElementById('query').value = '';
+	document.getElementById('results').innerHTML = '';
+}
+</script>
+</head>
+<body>
+
+<h1>search database</h1>
+
+<div class="nav">
+<a href="main.html">home</a> |
+<a href="browse.html">browse</a> |
+<a href="search.html">search</a>
+</div>
+
+<h2>search the database</h2>
+
+<p>enter search term:</p>
+<input type="text" id="query" size="40" placeholder="search for empires, figures, sites...">
+<button onclick="searchDatabase()">search</button>
+<button onclick="clearSearch()">clear</button>
+
+<div id="results"></div>
+
+<h2>search tips</h2>
+<ul>
+<li>search is case insensitive</li>
+<li>searches both title and description</li>
+<li>minimum 2 characters required</li>
+<li>try searching: ashoka, taj, gupta, vedic, mughal</li>
+</ul>
+
+</body>
+</html>
