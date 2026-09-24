@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(New-Item -ItemType File -Path \"C:\\\\Users\\\\karae\\\\Apps\\\\Code\\\\pranav\\\\README.md\" -Force)"
+    ]
+  }
+}
